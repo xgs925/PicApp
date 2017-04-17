@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+
+    allprojects {
+        repositories {
+            mavenCentral()
+        }
+    }
+}
+
+dependencies {
+    def commonDependencies = rootProject.ext.commonDependencies
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile commonDependencies.appcompat
+    compile commonDependencies.umengAnalytics
+    compile commonDependencies.rxJava
+    compile commonDependencies.rxAndroid
+    compile commonDependencies.retrofit
+    compile commonDependencies.retrofitConverterGson
+    compile commonDependencies.retrofitAdapterRxjava
+    compile commonDependencies.gson
+    compile commonDependencies.rxpermissions
+    compile commonDependencies.okhttp
+    compile commonDependencies.glide
+    compile commonDependencies.recyclerview
+    compile 'com.liulishuo.filedownloader:library:1.3.9'
+}

@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="common_pop_button_anim" >
+        <item name="android:windowEnterAnimation">@anim/text_pop_button_enter</item>
+        <item name="android:windowExitAnimation">@anim/text_pop_button_exit</item>
+    </style>
+    <style name="help_pop_anim" >
+        <item name="android:windowEnterAnimation">@anim/help_pop_enter</item>
+        <item name="android:windowExitAnimation">@anim/help_pop_exit</item>
+    </style>
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>
